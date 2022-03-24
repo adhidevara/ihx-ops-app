@@ -1,0 +1,13 @@
+
+ .my-modal{
+    width: 90vw;
+    max-width: 80vw;
+}
+
+.modal-header
+ {
+     padding:9px 15px;
+     border-bottom:1px solid #eee;
+     background-color: #add8e6;
+     color:#eee
+ }
