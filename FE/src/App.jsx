@@ -1,16 +1,16 @@
 import React from 'react'
 // import Tambah from './tambah'
 // import Inc from './inc'
-
 // import Header1 from './layout/header1'
 // import Header2 from './layout/header2'
-import Landing_Page from './landing/index'
 // import Footer from './layout/footer'
+import Login from './login/index'
+import DashboardSolver from './dashboard-solver/index'
 import profileDokter from './profileDokter/index'
 import detailDokter from './detailDokter/index'
 import indexBank from './bank/index'
 import { config } from './config/config'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -43,7 +43,8 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Landing_Page}></Route>
+          <Route exact path='/' component={Login}></Route>
+          <Route exact path='/dashboard-solver' component={DashboardSolver}></Route>
           <Route exact path='/profileDokter' component={profileDokter}></Route>
           <Route exact path='/detailDokter' component={detailDokter}></Route>
           <Route exact path='/indexBank' component={indexBank}></Route>
