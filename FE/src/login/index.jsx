@@ -8,7 +8,12 @@ const Login = (props) => {
   const [loading, setLoading] = useState(false)
 
   const handleLogin = () =>{
-    props.history.push('/dashboard-solver')
+    if(username == "admin" && password == "Abcd1234"){
+      props.history.push('/dashboard-solver')
+    }
+    else{
+      alert("can't login")
+    }
   }
   
   return (
@@ -42,8 +47,8 @@ const Login = (props) => {
                   type="password"
                   class="form-control"
                   placeholder="Password"
-                  value={username}
-                  onChange={e => setUsername(e.target.value)}
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
                 />
                 <div class="input-group-append">
                   <div class="input-group-text">
